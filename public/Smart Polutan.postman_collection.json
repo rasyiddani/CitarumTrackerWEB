@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "7aafceed-4698-4566-b993-b86c361df91e",
+		"name": "Smart Polutan",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11108847"
+	},
+	"item": [
+		{
+			"name": "node",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}nodes?node=Node 1&limit=10",
+							"host": [
+								"{{url}}nodes"
+							],
+							"query": [
+								{
+									"key": "node",
+									"value": "Node 1"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "list node id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}nodes/list",
+							"host": [
+								"{{url}}nodes"
+							],
+							"path": [
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "node",
+									"value": "node 1",
+									"type": "text"
+								},
+								{
+									"key": "fasa",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "imaginer",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "magnitude",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "real",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "impedance",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "time",
+									"value": "3454354",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}nodes",
+							"host": [
+								"{{url}}nodes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://127.0.0.1:8000/api/",
+			"type": "string"
+		}
+	]
+}
